@@ -3,10 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://b573eoiljmkmu" path="res://assets/mystic_woods/characters/player.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://dnf6elwyfyyi8" path="res://scripts/player.gd" id="1_g2els"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rde4v"]
-radius = 7.0
-height = 24.0
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_qhqgy"]
 atlas = ExtResource("1_3vyb7")
 region = Rect2(0, 384, 48, 48)
@@ -417,17 +413,22 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="player" type="CharacterBody2D" unique_id=1278274472]
-script = ExtResource("1_g2els")
+[sub_resource type="CircleShape2D" id="CircleShape2D_r6c1p"]
+radius = 4.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=429793369]
-position = Vector2(169, 102)
-shape = SubResource("CapsuleShape2D_rde4v")
+[node name="player" type="CharacterBody2D" unique_id=1278274472 groups=["player"]]
+y_sort_enabled = true
+script = ExtResource("1_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2110510660]
 position = Vector2(169, 95)
 sprite_frames = SubResource("SpriteFrames_i08kd")
 animation = &"front_idle"
+offset = Vector2(0, -15)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=429793369]
+position = Vector2(169, 94)
+shape = SubResource("CircleShape2D_r6c1p")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=287481673]
 position = Vector2(168, 97)
