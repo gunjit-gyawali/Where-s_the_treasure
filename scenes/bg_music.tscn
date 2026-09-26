@@ -1,9 +1,18 @@
 [gd_scene format=3 uid="uid://cftad6a87e7eq"]
 
+[ext_resource type="Script" uid="uid://6x5wbwfqfqwn" path="res://scripts/bg_music.gd" id="1_8f2av"]
 [ext_resource type="AudioStream" uid="uid://8363fus7f03q" path="res://assets/bg_music.mp3" id="1_f6gl3"]
+[ext_resource type="AudioStream" uid="uid://dauctea7jo4pl" path="res://assets/in_game_bg.mp3" id="3_188bi"]
 
-[node name="Bg_music" type="AudioStreamPlayer" unique_id=1418370677]
+[node name="Bg_music" type="Node" unique_id=1144525296]
+script = ExtResource("1_8f2av")
+
+[node name="MenuMusic" type="AudioStreamPlayer" parent="." unique_id=403266225]
 stream = ExtResource("1_f6gl3")
-volume_db = -6.71
+autoplay = true
+parameters/looping = true
+
+[node name="GameMusic" type="AudioStreamPlayer" parent="." unique_id=925293638]
+stream = ExtResource("3_188bi")
 autoplay = true
 parameters/looping = true
