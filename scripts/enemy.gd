@@ -1,7 +1,6 @@
 class_name Enemy
 extends CharacterBody2D
 
-<<<<<<< HEAD
 @export var speed: float = 40.0
 
 var player: Node2D = null
@@ -20,25 +19,6 @@ func _physics_process(_delta: float) -> void:
 		if direction.x != 0.0:
 			sprite.flip_h = direction.x < 0.0
 		sprite.play("walk")
-=======
-@export var SPEED := 60.0
-@export var DETECTION_RANGE := 300.0
-
-var player: Node2D
-
-func _ready():
-	player = get_tree().get_first_node_in_group("player")
-
-func _physics_process(delta):
-	if player == null:
-		return
-
-	var distance := global_position.distance_to(player.global_position)
-
-	if distance <= DETECTION_RANGE:
-		var direction := (player.global_position - global_position).normalized()
-		velocity = direction * SPEED
->>>>>>> 8cc1603 (1st world)
 	else:
 		velocity = Vector2.ZERO
 		sprite.play("idle")
@@ -50,7 +30,6 @@ func _player_target() -> Vector2:
 		return player_sprite.global_position
 	return player.global_position
 
-<<<<<<< HEAD
 
 func _on_detection_area_body_entered(body: Node2D) -> void:
 	player = body
@@ -60,6 +39,3 @@ func _on_detection_area_body_entered(body: Node2D) -> void:
 func _on_detection_area_body_exited(_body: Node2D) -> void:
 	player = null
 	player_chase = false
-=======
-	move_and_slide()
->>>>>>> 8cc1603 (1st world)
