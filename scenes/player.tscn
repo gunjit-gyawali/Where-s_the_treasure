@@ -428,3 +428,9 @@ shape = SubResource("CapsuleShape2D_rde4v")
 position = Vector2(0, 2)
 sprite_frames = SubResource("SpriteFrames_i08kd")
 animation = &"front_idle"
+<<<<<<< HEAD
+=======
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=927793070]
+position_smoothing_enabled = true
+>>>>>>> 20e99c6 (Main_Menu)
