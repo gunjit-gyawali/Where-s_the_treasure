@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://ce3gl4j6ewcbm"]
 
-[ext_resource type="Texture2D" uid="uid://kewy1ymyrxkk" path="res://assets/random_img/bg_main_menu.png" id="1_7fhwk"]
+[ext_resource type="Texture2D" uid="uid://kewy1ymyrxkk" path="res://assets/bg_main_menu.png" id="1_7fhwk"]
+[ext_resource type="Script" uid="uid://oe5h3456ti8a" path="res://scripts/main_menu_1.gd" id="1_ne61v"]
 [ext_resource type="FontFile" uid="uid://tmsfvoyluqes" path="res://assets/fonts/Cinzel-Regular.otf" id="2_vah3s"]
 [ext_resource type="Texture2D" uid="uid://b4da8e7meaxtm" path="res://assets/Main_Menu.png" id="3_t6tcy"]
 [ext_resource type="FontFile" uid="uid://bxepin8t8l1u6" path="res://assets/fonts/CinzelDecorative-Regular.otf" id="4_i8c1e"]
@@ -11,103 +12,108 @@ texture = ExtResource("1_7fhwk")
 [sub_resource type="Gradient" id="Gradient_7fhwk"]
 colors = PackedColorArray(0, 0, 0, 0.87058824, 0, 0, 0, 0)
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_a6whi"]
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ne61v"]
 gradient = SubResource("Gradient_7fhwk")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n27jj"]
-texture = SubResource("GradientTexture1D_a6whi")
+texture = SubResource("GradientTexture1D_ne61v")
 
 [sub_resource type="LabelSettings" id="LabelSettings_7fhwk"]
 font = ExtResource("2_vah3s")
-font_size = 11
+font_size = 50
 shadow_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Gradient" id="Gradient_i8c1e"]
 offsets = PackedFloat32Array(0.285, 1)
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_v2gp3"]
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_xgkdp"]
 gradient = SubResource("Gradient_i8c1e")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xgkdp"]
-texture = SubResource("GradientTexture2D_v2gp3")
+texture = SubResource("GradientTexture2D_xgkdp")
 
 [node name="main_menu" type="Node2D" unique_id=468065658]
+script = ExtResource("1_ne61v")
 
 [node name="Panel" type="Panel" parent="." unique_id=496354687]
-offset_right = 294.20602
-offset_bottom = 164.0
+offset_right = 1158.8848
+offset_bottom = 646.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_7fhwk")
 
 [node name="Panel2" type="Panel" parent="." unique_id=1447747608]
-offset_right = 186.0
-offset_bottom = 164.0
+offset_right = 1114.0
+offset_bottom = 654.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_n27jj")
 
 [node name="Label" type="Label" parent="." unique_id=1791091536]
-offset_left = 46.000004
-offset_top = 27.0
-offset_right = 84.0
-offset_bottom = 43.0
+offset_left = 173.0
+offset_top = 104.0
+offset_right = 343.0
+offset_bottom = 164.0
 text = "~ The ~"
 label_settings = SubResource("LabelSettings_7fhwk")
 
 [node name="Label2" type="Label" parent="." unique_id=2094696346]
-offset_left = 24.0
-offset_top = 40.0
-offset_right = 106.0
-offset_bottom = 56.0
+offset_left = 85.0
+offset_top = 162.0
+offset_right = 456.0
+offset_bottom = 222.0
 text = "Lost Treasure"
 label_settings = SubResource("LabelSettings_7fhwk")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1234302684]
-position = Vector2(66.03125, 55.316395)
-scale = Vector2(0.121701635, 0.121701665)
+position = Vector2(279.2991, 232.89355)
+scale = Vector2(0.62435967, 0.62435985)
 texture = ExtResource("3_t6tcy")
 region_enabled = true
 region_rect = Rect2(462.3028, 665.36035, 739.3737, 58.481567)
 
 [node name="Game" type="Button" parent="." unique_id=1727987792]
-offset_left = -3.0
-offset_top = 78.0
-offset_right = 79.0
-offset_bottom = 93.0
+offset_left = -12.0
+offset_top = 346.0
+offset_right = 436.0
+offset_bottom = 394.0
 theme_override_colors/font_color = Color(0.9529412, 0.9098039, 0.8117647, 1)
 theme_override_colors/font_pressed_color = Color(0.78431374, 0.5294118, 0.22745098, 1)
 theme_override_colors/font_hover_color = Color(0.9098039, 0.7058824, 0.36078432, 1)
 theme_override_fonts/font = ExtResource("4_i8c1e")
-theme_override_font_sizes/font_size = 7
+theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxTexture_xgkdp")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_xgkdp")
 theme_override_styles/hover = SubResource("StyleBoxTexture_xgkdp")
 text = "New Game"
 
 [node name="Game2" type="Button" parent="." unique_id=565482702]
-offset_left = -3.0
-offset_top = 99.0
-offset_right = 79.0
-offset_bottom = 114.0
+offset_left = -17.0
+offset_top = 404.0
+offset_right = 440.0
+offset_bottom = 453.0
 theme_override_colors/font_color = Color(0.9529412, 0.9098039, 0.8117647, 1)
 theme_override_colors/font_pressed_color = Color(0.78431374, 0.5294118, 0.22745098, 1)
 theme_override_colors/font_hover_color = Color(0.9098039, 0.7058824, 0.36078432, 1)
 theme_override_fonts/font = ExtResource("4_i8c1e")
-theme_override_font_sizes/font_size = 7
+theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxTexture_xgkdp")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_xgkdp")
 theme_override_styles/hover = SubResource("StyleBoxTexture_xgkdp")
 text = "Settings"
 
 [node name="Game3" type="Button" parent="." unique_id=85126352]
-offset_left = -3.0
-offset_top = 120.0
-offset_right = 79.0
-offset_bottom = 135.0
+offset_left = -14.0
+offset_top = 465.0
+offset_right = 424.0
+offset_bottom = 512.0
 theme_override_colors/font_color = Color(0.9529412, 0.9098039, 0.8117647, 1)
 theme_override_colors/font_pressed_color = Color(0.78431374, 0.5294118, 0.22745098, 1)
 theme_override_colors/font_hover_color = Color(0.9098039, 0.7058824, 0.36078432, 1)
 theme_override_fonts/font = ExtResource("4_i8c1e")
-theme_override_font_sizes/font_size = 7
+theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxTexture_xgkdp")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_xgkdp")
 theme_override_styles/hover = SubResource("StyleBoxTexture_xgkdp")
 text = "Quit"
+
+[connection signal="pressed" from="Game" to="." method="_on_game_pressed"]
+[connection signal="pressed" from="Game2" to="." method="_on_game_2_pressed"]
+[connection signal="pressed" from="Game3" to="." method="_on_game_3_pressed"]

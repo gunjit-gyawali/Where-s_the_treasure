@@ -1,0 +1,190 @@
+[gd_scene format=3 uid="uid://2ibbi328nn6k"]
+
+[ext_resource type="Texture2D" uid="uid://kewy1ymyrxkk" path="res://assets/bg_main_menu.png" id="1_f4mfi"]
+[ext_resource type="Script" uid="uid://bbbeu733pfumd" path="res://scripts/settings.gd" id="1_gis3k"]
+[ext_resource type="FontFile" uid="uid://tmsfvoyluqes" path="res://assets/fonts/Cinzel-Regular.otf" id="2_es4n0"]
+[ext_resource type="Texture2D" uid="uid://b4da8e7meaxtm" path="res://assets/Main_Menu.png" id="3_gis3k"]
+[ext_resource type="FontFile" uid="uid://bxepin8t8l1u6" path="res://assets/fonts/CinzelDecorative-Regular.otf" id="4_83j8s"]
+[ext_resource type="FontFile" uid="uid://cmh8qi0a2srw5" path="res://assets/fonts/CinzelDecorative-Black.otf" id="5_es4n0"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gjs24"]
+texture = ExtResource("1_f4mfi")
+
+[sub_resource type="Gradient" id="Gradient_am25x"]
+colors = PackedColorArray(0, 0, 0, 0.87058824, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_a6whi"]
+gradient = SubResource("Gradient_am25x")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4ppmf"]
+texture = SubResource("GradientTexture1D_a6whi")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_es4n0"]
+bg_color = Color(0, 0, 0, 0.7058824)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_uhhto"]
+font = ExtResource("2_es4n0")
+font_size = 50
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Gradient" id="Gradient_1g033"]
+offsets = PackedFloat32Array(0.285, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_v2gp3"]
+gradient = SubResource("Gradient_1g033")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_01roj"]
+texture = SubResource("GradientTexture2D_v2gp3")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gis3k"]
+bg_color = Color(0, 0, 0, 0.827451)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_83j8s"]
+bg_color = Color(0.09239707, 0.09239706, 0.09239706, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="Settings" type="Node2D" unique_id=364159831]
+script = ExtResource("1_gis3k")
+
+[node name="Panel" type="Panel" parent="." unique_id=284752036]
+offset_right = 1158.8848
+offset_bottom = 646.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_gjs24")
+
+[node name="Panel2" type="Panel" parent="." unique_id=1512520751]
+offset_right = 1114.0
+offset_bottom = 654.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_4ppmf")
+
+[node name="Panel4" type="Panel" parent="." unique_id=1460148952]
+offset_left = -130.0
+offset_top = -83.0
+offset_right = 1179.0
+offset_bottom = 667.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_es4n0")
+
+[node name="Label" type="Label" parent="." unique_id=464483538]
+offset_left = 173.0
+offset_top = 104.0
+offset_right = 343.0
+offset_bottom = 164.0
+text = "~ The ~"
+label_settings = SubResource("LabelSettings_uhhto")
+
+[node name="Label2" type="Label" parent="." unique_id=56154428]
+offset_left = 85.0
+offset_top = 162.0
+offset_right = 456.0
+offset_bottom = 222.0
+text = "Lost Treasure"
+label_settings = SubResource("LabelSettings_uhhto")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=400668914]
+position = Vector2(279.2991, 232.89355)
+scale = Vector2(0.62435967, 0.62435985)
+texture = ExtResource("3_gis3k")
+region_enabled = true
+region_rect = Rect2(462.3028, 665.36035, 739.3737, 58.481567)
+
+[node name="Game" type="Button" parent="." unique_id=2092285149]
+offset_left = -12.0
+offset_top = 346.0
+offset_right = 436.0
+offset_bottom = 394.0
+theme_override_colors/font_color = Color(0.9529412, 0.9098039, 0.8117647, 1)
+theme_override_colors/font_pressed_color = Color(0.78431374, 0.5294118, 0.22745098, 1)
+theme_override_colors/font_hover_color = Color(0.9098039, 0.7058824, 0.36078432, 1)
+theme_override_fonts/font = ExtResource("4_83j8s")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxTexture_01roj")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_01roj")
+theme_override_styles/hover = SubResource("StyleBoxTexture_01roj")
+text = "New Game"
+
+[node name="Game2" type="Button" parent="." unique_id=831185712]
+offset_left = -17.0
+offset_top = 404.0
+offset_right = 440.0
+offset_bottom = 453.0
+theme_override_colors/font_color = Color(0.9529412, 0.9098039, 0.8117647, 1)
+theme_override_colors/font_pressed_color = Color(0.78431374, 0.5294118, 0.22745098, 1)
+theme_override_colors/font_hover_color = Color(0.9098039, 0.7058824, 0.36078432, 1)
+theme_override_fonts/font = ExtResource("4_83j8s")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxTexture_01roj")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_01roj")
+theme_override_styles/hover = SubResource("StyleBoxTexture_01roj")
+text = "Settings"
+
+[node name="Game3" type="Button" parent="." unique_id=1783531203]
+offset_left = -14.0
+offset_top = 465.0
+offset_right = 424.0
+offset_bottom = 512.0
+theme_override_colors/font_color = Color(0.9529412, 0.9098039, 0.8117647, 1)
+theme_override_colors/font_pressed_color = Color(0.78431374, 0.5294118, 0.22745098, 1)
+theme_override_colors/font_hover_color = Color(0.9098039, 0.7058824, 0.36078432, 1)
+theme_override_fonts/font = ExtResource("4_83j8s")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxTexture_01roj")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_01roj")
+theme_override_styles/hover = SubResource("StyleBoxTexture_01roj")
+text = "Quit"
+
+[node name="Panel3" type="Panel" parent="." unique_id=1308239741]
+offset_left = 545.0
+offset_top = 281.0
+offset_right = 911.0
+offset_bottom = 582.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_gis3k")
+
+[node name="Game4" type="Label" parent="." unique_id=2137626912]
+offset_left = 547.0
+offset_top = 302.0
+offset_right = 911.0
+offset_bottom = 350.0
+theme_override_colors/font_color = Color(0.9529412, 0.9098039, 0.8117647, 1)
+theme_override_fonts/font = ExtResource("5_es4n0")
+theme_override_font_sizes/font_size = 25
+text = "                  Settings"
+
+[node name="Game5" type="Button" parent="." unique_id=2067542182]
+offset_left = 573.0
+offset_top = 414.0
+offset_right = 882.0
+offset_bottom = 463.0
+theme_override_colors/font_color = Color(0.9529412, 0.9098039, 0.8117647, 1)
+theme_override_colors/font_pressed_color = Color(0.78431374, 0.5294118, 0.22745098, 1)
+theme_override_colors/font_hover_color = Color(0.9098039, 0.7058824, 0.36078432, 1)
+theme_override_fonts/font = ExtResource("5_es4n0")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_83j8s")
+text = "Full-Screen"
+
+[node name="Game7" type="Button" parent="." unique_id=1930173101]
+offset_left = 573.0
+offset_top = 478.0
+offset_right = 882.0
+offset_bottom = 527.0
+theme_override_colors/font_color = Color(0.9529412, 0.9098039, 0.8117647, 1)
+theme_override_colors/font_pressed_color = Color(0.78431374, 0.5294118, 0.22745098, 1)
+theme_override_colors/font_hover_color = Color(0.9098039, 0.7058824, 0.36078432, 1)
+theme_override_fonts/font = ExtResource("5_es4n0")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_83j8s")
+text = "Back"
+
+[connection signal="pressed" from="Game5" to="." method="_on_game_5_pressed"]
+[connection signal="pressed" from="Game7" to="." method="_on_game_7_pressed"]
