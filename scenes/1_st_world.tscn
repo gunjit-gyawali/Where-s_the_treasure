@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://hm0j3u0j85sg"]
+
+[ext_resource type="PackedScene" uid="uid://b6k2nw2gupyhk" path="res://scenes/player.tscn" id="17_xlgje"]
+
+[node name="1st-World" type="Node2D" unique_id=975400702]
+
+[node name="player" parent="." unique_id=1278274472 instance=ExtResource("17_xlgje")]
+visible = false
