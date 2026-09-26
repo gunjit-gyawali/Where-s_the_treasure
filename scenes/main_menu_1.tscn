@@ -1,13 +1,15 @@
 [gd_scene format=3 uid="uid://ce3gl4j6ewcbm"]
 
-[ext_resource type="Texture2D" uid="uid://bwtgm05agvhf2" path="res://assets/random_img/bg_main_menu.png" id="1_7fhwk"]
 [ext_resource type="Script" uid="uid://oe5h3456ti8a" path="res://scripts/main_menu_1.gd" id="1_ne61v"]
 [ext_resource type="FontFile" uid="uid://tmsfvoyluqes" path="res://assets/fonts/Cinzel-Regular.otf" id="2_vah3s"]
+[ext_resource type="Texture2D" uid="uid://bwtgm05agvhf2" path="res://assets/random_img/bg_main_menu.png" id="2_xgkdp"]
 [ext_resource type="Texture2D" uid="uid://b4da8e7meaxtm" path="res://assets/random_img/Main_Menu.png" id="3_t6tcy"]
 [ext_resource type="FontFile" uid="uid://bxepin8t8l1u6" path="res://assets/fonts/CinzelDecorative-Regular.otf" id="4_i8c1e"]
+[ext_resource type="AudioStream" uid="uid://533yw7uj1d6m" path="res://assets/hover.mp3" id="6_xgkdp"]
+[ext_resource type="AudioStream" uid="uid://cmp333e25tsq1" path="res://assets/pressed.mp3" id="7_v2gp3"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7fhwk"]
-texture = ExtResource("1_7fhwk")
+texture = ExtResource("2_xgkdp")
 
 [sub_resource type="Gradient" id="Gradient_7fhwk"]
 colors = PackedColorArray(0, 0, 0, 0.87058824, 0, 0, 0, 0)
@@ -114,6 +116,15 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_xgkdp")
 theme_override_styles/hover = SubResource("StyleBoxTexture_xgkdp")
 text = "Quit"
 
+[node name="hover1" type="AudioStreamPlayer" parent="." unique_id=1228829364]
+stream = ExtResource("6_xgkdp")
+
+[node name="pressed1" type="AudioStreamPlayer" parent="." unique_id=687369199]
+stream = ExtResource("7_v2gp3")
+
+[connection signal="mouse_entered" from="Game" to="." method="_on_game_mouse_entered"]
 [connection signal="pressed" from="Game" to="." method="_on_game_pressed"]
+[connection signal="mouse_entered" from="Game2" to="." method="_on_game_2_mouse_entered"]
 [connection signal="pressed" from="Game2" to="." method="_on_game_2_pressed"]
+[connection signal="mouse_entered" from="Game3" to="." method="_on_game_3_mouse_entered"]
 [connection signal="pressed" from="Game3" to="." method="_on_game_3_pressed"]

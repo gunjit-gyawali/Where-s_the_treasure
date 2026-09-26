@@ -1,14 +1,16 @@
 [gd_scene format=3 uid="uid://2ibbi328nn6k"]
 
-[ext_resource type="Texture2D" uid="uid://bwtgm05agvhf2" path="res://assets/random_img/bg_main_menu.png" id="1_f4mfi"]
 [ext_resource type="Script" uid="uid://bbbeu733pfumd" path="res://scripts/settings.gd" id="1_gis3k"]
+[ext_resource type="Texture2D" uid="uid://bwtgm05agvhf2" path="res://assets/random_img/bg_main_menu.png" id="2_83j8s"]
 [ext_resource type="FontFile" uid="uid://tmsfvoyluqes" path="res://assets/fonts/Cinzel-Regular.otf" id="2_es4n0"]
 [ext_resource type="Texture2D" uid="uid://b4da8e7meaxtm" path="res://assets/random_img/Main_Menu.png" id="3_gis3k"]
 [ext_resource type="FontFile" uid="uid://bxepin8t8l1u6" path="res://assets/fonts/CinzelDecorative-Regular.otf" id="4_83j8s"]
 [ext_resource type="FontFile" uid="uid://cmh8qi0a2srw5" path="res://assets/fonts/CinzelDecorative-Black.otf" id="5_es4n0"]
+[ext_resource type="AudioStream" uid="uid://533yw7uj1d6m" path="res://assets/hover.mp3" id="7_83j8s"]
+[ext_resource type="AudioStream" uid="uid://cmp333e25tsq1" path="res://assets/pressed.mp3" id="8_gjs24"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gjs24"]
-texture = ExtResource("1_f4mfi")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1mv4r"]
+texture = ExtResource("2_83j8s")
 
 [sub_resource type="Gradient" id="Gradient_am25x"]
 colors = PackedColorArray(0, 0, 0, 0.87058824, 0, 0, 0, 0)
@@ -61,7 +63,7 @@ script = ExtResource("1_gis3k")
 [node name="Panel" type="Panel" parent="." unique_id=284752036]
 offset_right = 1158.8848
 offset_bottom = 646.0
-theme_override_styles/panel = SubResource("StyleBoxTexture_gjs24")
+theme_override_styles/panel = SubResource("StyleBoxTexture_1mv4r")
 
 [node name="Panel2" type="Panel" parent="." unique_id=1512520751]
 offset_right = 1114.0
@@ -99,7 +101,6 @@ region_enabled = true
 region_rect = Rect2(462.3028, 665.36035, 739.3737, 58.481567)
 
 [node name="Game" type="Button" parent="." unique_id=2092285149]
-visible = false
 offset_left = -12.0
 offset_top = 346.0
 offset_right = 436.0
@@ -115,7 +116,6 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_01roj")
 text = "New Game"
 
 [node name="Game2" type="Button" parent="." unique_id=831185712]
-visible = false
 offset_left = -17.0
 offset_top = 404.0
 offset_right = 440.0
@@ -131,7 +131,6 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_01roj")
 text = "Settings"
 
 [node name="Game3" type="Button" parent="." unique_id=1783531203]
-visible = false
 offset_left = -14.0
 offset_top = 465.0
 offset_right = 424.0
@@ -189,5 +188,13 @@ theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxFlat_83j8s")
 text = "Back"
 
+[node name="hover" type="AudioStreamPlayer" parent="." unique_id=2020022295]
+stream = ExtResource("7_83j8s")
+
+[node name="pressed" type="AudioStreamPlayer" parent="." unique_id=1766667277]
+stream = ExtResource("8_gjs24")
+
+[connection signal="mouse_entered" from="Game5" to="." method="_on_game_5_mouse_entered"]
 [connection signal="pressed" from="Game5" to="." method="_on_game_5_pressed"]
+[connection signal="mouse_entered" from="Game7" to="." method="_on_game_7_mouse_entered"]
 [connection signal="pressed" from="Game7" to="." method="_on_game_7_pressed"]
