@@ -15,7 +15,6 @@
 [ext_resource type="Texture2D" uid="uid://bubaenhplgnd8" path="res://assets/mystic_woods/tilesets/floors/wooden.png" id="12_f53ia"]
 [ext_resource type="Texture2D" uid="uid://06e2me3182e1" path="res://assets/mystic_woods/particles/dust_particles_01.png" id="13_7uo55"]
 [ext_resource type="PackedScene" uid="uid://b6k2nw2gupyhk" path="res://scenes/player.tscn" id="14_emu1g"]
-[ext_resource type="Script" uid="uid://dnf6elwyfyyi8" path="res://scripts/player.gd" id="15_co50f"]
 [ext_resource type="PackedScene" uid="uid://dr2dbw7xp8od4" path="res://scenes/enemy.tscn" id="15_hvdyd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_co50f"]
@@ -267,11 +266,8 @@ layer_2/name = "ysort"
 layer_2/y_sort_enabled = true
 layer_2/tile_data = PackedInt32Array(983045, 12, 5, 1179663, 12, 5, 1245218, 12, 5, 131080, 12, 5, 131088, 524300, 6, 131095, 393228, 7, 393238, 655372, 7, 1245208, 655372, 7, 1310764, 393228, 7, 196640, 12, 5, 917514, 655372, 7, 1114155, 655372, 7, 1179658, 524300, 6, 1179678, 524300, 6, 196636, 524300, 6, 458799, 524300, 6, 786432, 12, 1, 262156, 12, 1, 458770, 12, 0, 458769, 12, 0, 458780, 12, 0, 1114133, 655372, 0, 1179654, 524300, 6, 1048589, 524300, 6, 393241, 524300, 6, 262181, 524300, 6, 1310768, 524300, 6, 1245223, 524300, 6, 1310741, 393228, 7, 983072, 393228, 7, 65550, 393228, 7, 1048602, 327692, 0, 458774, 327692, 0, 786435, 327692, 0, 917521, 327692, 0, 131092, 12, 5, 1048578, 12, 5, 1179685, 12, 5, 1310747, 12, 5)
 
-[node name="player" type="CharacterBody2D" parent="." unique_id=1278274472 groups=["player"] instance=ExtResource("14_emu1g")]
-y_sort_enabled = true
+[node name="player" parent="." unique_id=1278274472 instance=ExtResource("14_emu1g")]
 position = Vector2(-117, -28)
-collision_layer = 3
-script = ExtResource("15_co50f")
 
 [node name="enemy" parent="." unique_id=1642957285 instance=ExtResource("15_hvdyd")]
 position = Vector2(139, 121)

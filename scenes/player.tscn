@@ -416,6 +416,9 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_r6c1p"]
 radius = 4.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_cfg4s"]
+radius = 21.023796
+
 [node name="player" type="CharacterBody2D" unique_id=1278274472 groups=["player"]]
 y_sort_enabled = true
 collision_layer = 3
@@ -438,3 +441,22 @@ limit_left = 0
 limit_top = 0
 limit_right = 833
 limit_bottom = 360
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+
+[node name="player_hitbox" type="Area2D" parent="." unique_id=1556814460]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player_hitbox" unique_id=1454478280]
+position = Vector2(170, 89)
+shape = SubResource("CircleShape2D_cfg4s")
+
+[node name="attack_cooldown" type="Timer" parent="." unique_id=781991757]
+wait_time = 0.5
+
+[node name="deal_attack_timer" type="Timer" parent="." unique_id=2101621665]
+wait_time = 0.5
+
+[connection signal="body_entered" from="player_hitbox" to="." method="_on_player_hitbox_body_entered"]
+[connection signal="body_exited" from="player_hitbox" to="." method="_on_player_hitbox_body_exited"]
+[connection signal="timeout" from="attack_cooldown" to="." method="_on_attack_cooldown_timeout"]
+[connection signal="timeout" from="deal_attack_timer" to="." method="_on_deal_attack_timer_timeout"]

@@ -3,6 +3,11 @@ extends CharacterBody2D
 
 @export var speed: float = 40.0
 
+var can_take_damage = true
+
+var health = 100
+var player_inattack_zone = false
+
 var player: Node2D = null
 var player_chase: bool = false
 
@@ -10,6 +15,9 @@ var player_chase: bool = false
 
 
 func _physics_process(_delta: float) -> void:
+	deal_damage()
+	
+	
 	if player_chase and is_instance_valid(player):
 		var target: Vector2 = _player_target()
 		var direction: Vector2 = global_position.direction_to(target)
@@ -39,3 +47,30 @@ func _on_detection_area_body_entered(body: Node2D) -> void:
 func _on_detection_area_body_exited(_body: Node2D) -> void:
 	player = null
 	player_chase = false
+
+func enemy():
+	pass
+
+
+func _on_enemy_hitbox_body_entered(body: Node2D) -> void:
+	if body.has_method("player"):
+		player_inattack_zone = true
+
+
+func _on_enemy_hitbox_body_exited(body: Node2D) -> void:
+	if body.has_method("player"):
+		player_inattack_zone = false
+		
+func deal_damage():
+	if player_inattack_zone and Global.current_player_attack == true :
+		if can_take_damage == true:
+			health = health - 20
+			$take_damage_cooldown.start()
+			can_take_damage = false
+			print("slime health", health)
+			if health <= 0:
+				self.queue_free()
+
+
+func _on_take_damage_cooldown_timeout() -> void:
+	can_take_damage = true

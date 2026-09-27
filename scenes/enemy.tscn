@@ -132,6 +132,9 @@ radius = 5.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_i08kd"]
 radius = 50.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_rde4v"]
+radius = 14.0
+
 [node name="enemy" type="CharacterBody2D" unique_id=1642957285]
 script = ExtResource("1_md0e3")
 
@@ -145,7 +148,6 @@ frame_progress = 0.3883109
 position = Vector2(0, -3)
 shape = SubResource("CircleShape2D_cfg4s")
 
-
 [node name="detection_area" type="Area2D" parent="." unique_id=154161617]
 collision_layer = 2
 collision_mask = 2
@@ -154,6 +156,17 @@ collision_mask = 2
 position = Vector2(1, 1)
 shape = SubResource("CircleShape2D_i08kd")
 
+[node name="enemy_hitbox" type="Area2D" parent="." unique_id=1324942854]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy_hitbox" unique_id=1085795386]
+position = Vector2(0, -3)
+shape = SubResource("CircleShape2D_rde4v")
+
+[node name="take_damage_cooldown" type="Timer" parent="." unique_id=1863572867]
+wait_time = 0.5
+
 [connection signal="body_entered" from="detection_area" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="detection_area" to="." method="_on_detection_area_body_exited"]
-
+[connection signal="body_entered" from="enemy_hitbox" to="." method="_on_enemy_hitbox_body_entered"]
+[connection signal="body_exited" from="enemy_hitbox" to="." method="_on_enemy_hitbox_body_exited"]
+[connection signal="timeout" from="take_damage_cooldown" to="." method="_on_take_damage_cooldown_timeout"]
