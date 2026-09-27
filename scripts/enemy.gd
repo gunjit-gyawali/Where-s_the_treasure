@@ -5,7 +5,7 @@ extends CharacterBody2D
 
 var can_take_damage = true
 
-var health = 100
+var health = 60
 var player_inattack_zone = false
 
 var player: Node2D = null
@@ -16,6 +16,7 @@ var player_chase: bool = false
 
 func _physics_process(_delta: float) -> void:
 	deal_damage()
+	update_health()
 	
 	
 	if player_chase and is_instance_valid(player):
@@ -74,3 +75,11 @@ func deal_damage():
 
 func _on_take_damage_cooldown_timeout() -> void:
 	can_take_damage = true
+
+func update_health():
+	var healthbar = $healthbar
+	healthbar.value = health
+	if health == 60:
+		healthbar.visible = false
+	else:
+		healthbar.visible = true

@@ -317,7 +317,7 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 "
 
@@ -417,7 +417,6 @@ text = "Lobby"
 label_settings = SubResource("LabelSettings_yw88p")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1780948701]
-visible = false
 offset = Vector2(8, 8)
 transform = Transform2D(1, 0, 0, 1, 8, 8)
 

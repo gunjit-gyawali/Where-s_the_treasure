@@ -19,6 +19,8 @@ config/icon="res://icon.svg"
 
 BgMusic="*uid://cftad6a87e7eq"
 Global="*uid://r78r02tyisrt"
+EventController="*uid://c8a7578h11uat"
+GameController="*uid://cl52rr1o7kd1n"
 
 [display]
 
