@@ -25,7 +25,7 @@ func _physics_process(_delta: float) -> void:
 		player_alive = false
 		health = 0
 		print("player died")
-		queue_free()
+		get_tree().change_scene_to_file("res://scenes/you_died.tscn")
 
 
 func _player_movement() -> void:

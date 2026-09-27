@@ -19,15 +19,16 @@
 [ext_resource type="PackedScene" uid="uid://mxfujejdllj" path="res://scenes/clues.tscn" id="17_rg7ok"]
 [ext_resource type="FontFile" uid="uid://cmh8qi0a2srw5" path="res://assets/fonts/CinzelDecorative-Black.otf" id="18_pvi7j"]
 [ext_resource type="PackedScene" uid="uid://dcxa28hpis78w" path="res://scenes/clues_ui.tscn" id="19_5wjeq"]
+[ext_resource type="PackedScene" uid="uid://bfatumrlb6xcg" path="res://scenes/pause_menu.tscn" id="20_f53ia"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_co50f"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7uo55"]
 texture = ExtResource("1_axyqp")
 0:0/0 = 0
 1:0/0 = 0
 0:1/0 = 0
 1:1/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rg7ok"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s8ivg"]
 texture = ExtResource("2_3m0gu")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -62,14 +63,14 @@ texture = ExtResource("2_3m0gu")
 3:3/0 = 0
 3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3.507245, -6.384985, 5.305832, -5.845409, 5.485691, -0.9892225, 3.9084153, 0.062149882, 4.586397, 4.7662563, 2.428093, 5.66555, 2.428093, 8, -1.528799, 8, -1.7086582, 5.1259747, -4.406539, 4.586397, -4.9461155, -0.62950516, -5.305833, -4.406539)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pvi7j"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ab5jv"]
 texture = ExtResource("3_a2svu")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5wjeq"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rbd1q"]
 texture = ExtResource("4_emu1g")
 0:0/0 = 0
 0:0/0/y_sort_origin = 2
@@ -101,7 +102,7 @@ texture = ExtResource("4_emu1g")
 10:7/0 = 0
 10:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4.856185, -8, 4.856186, -8, 8, -3.2374573, 11.51096, 4.1367507, 9.71237, 9.172795, -6.6547737, 8, -12.050535, 6.295055, -10.971382, -2.1583052)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f53ia"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3xk2h"]
 texture = ExtResource("5_hvdyd")
 0:0/0 = 0
 1:0/0 = 0
@@ -110,11 +111,11 @@ texture = ExtResource("5_hvdyd")
 4:0/0 = 0
 5:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7uo55"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gph3w"]
 texture = ExtResource("3_o7h1l")
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s8ivg"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0airf"]
 texture = ExtResource("4_rwd0d")
 0:4/size_in_atlas = Vector2i(1, 3)
 0:4/0 = 0
@@ -186,7 +187,7 @@ texture = ExtResource("4_rwd0d")
 5:5/0 = 0
 4:5/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ab5jv"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8rca2"]
 texture = ExtResource("8_co50f")
 0:0/0 = 0
 1:0/0 = 0
@@ -220,17 +221,17 @@ texture = ExtResource("8_co50f")
 4:5/0 = 0
 5:5/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rbd1q"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j8pyg"]
 texture = ExtResource("9_rg7ok")
 0:0/0 = 0
 1:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3xk2h"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pg8nx"]
 texture = ExtResource("10_pvi7j")
 0:0/0 = 0
 1:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gph3w"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hmty3"]
 texture = ExtResource("11_5wjeq")
 0:0/0 = 0
 1:0/0 = 0
@@ -248,28 +249,28 @@ texture = ExtResource("11_5wjeq")
 3:2/0 = 0
 4:2/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0airf"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0fc1a"]
 texture = ExtResource("12_f53ia")
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8rca2"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1ixkb"]
 texture = ExtResource("13_7uo55")
 
 [sub_resource type="TileSet" id="TileSet_i08kd"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_co50f")
-sources/1 = SubResource("TileSetAtlasSource_rg7ok")
-sources/2 = SubResource("TileSetAtlasSource_7uo55")
-sources/3 = SubResource("TileSetAtlasSource_s8ivg")
-sources/4 = SubResource("TileSetAtlasSource_ab5jv")
-sources/5 = SubResource("TileSetAtlasSource_rbd1q")
-sources/6 = SubResource("TileSetAtlasSource_3xk2h")
-sources/7 = SubResource("TileSetAtlasSource_gph3w")
-sources/8 = SubResource("TileSetAtlasSource_0airf")
-sources/9 = SubResource("TileSetAtlasSource_8rca2")
-sources/10 = SubResource("TileSetAtlasSource_pvi7j")
-sources/12 = SubResource("TileSetAtlasSource_5wjeq")
-sources/13 = SubResource("TileSetAtlasSource_f53ia")
+sources/0 = SubResource("TileSetAtlasSource_7uo55")
+sources/1 = SubResource("TileSetAtlasSource_s8ivg")
+sources/2 = SubResource("TileSetAtlasSource_gph3w")
+sources/3 = SubResource("TileSetAtlasSource_0airf")
+sources/4 = SubResource("TileSetAtlasSource_8rca2")
+sources/5 = SubResource("TileSetAtlasSource_j8pyg")
+sources/6 = SubResource("TileSetAtlasSource_pg8nx")
+sources/7 = SubResource("TileSetAtlasSource_hmty3")
+sources/8 = SubResource("TileSetAtlasSource_0fc1a")
+sources/9 = SubResource("TileSetAtlasSource_1ixkb")
+sources/10 = SubResource("TileSetAtlasSource_ab5jv")
+sources/12 = SubResource("TileSetAtlasSource_rbd1q")
+sources/13 = SubResource("TileSetAtlasSource_3xk2h")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_co50f"]
 atlas = ExtResource("3_a2svu")
@@ -429,9 +430,12 @@ rotation = -0.2617994
 theme_override_styles/panel = SubResource("StyleBoxTexture_7uo55")
 
 [node name="clues_UI" parent="CanvasLayer" unique_id=1168798038 instance=ExtResource("19_5wjeq")]
-offset_left = -18.0
-offset_top = 12.0
-offset_right = -18.0
-offset_bottom = 12.0
+offset_left = -1.0
+offset_top = 1.0
+offset_right = -1.0
+offset_bottom = 1.0
+
+[node name="pause_menu" parent="." unique_id=882029895 instance=ExtResource("20_f53ia")]
+layer = 2
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

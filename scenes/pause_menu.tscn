@@ -1,0 +1,137 @@
+[gd_scene format=3 uid="uid://bfatumrlb6xcg"]
+
+[ext_resource type="Script" uid="uid://6rngubmivsau" path="res://scripts/pause_menu.gd" id="1_1s2dm"]
+[ext_resource type="Texture2D" uid="uid://bwtgm05agvhf2" path="res://assets/random_img/bg_main_menu.png" id="1_v4r4p"]
+[ext_resource type="FontFile" uid="uid://tmsfvoyluqes" path="res://assets/fonts/Cinzel-Regular.otf" id="2_1s2dm"]
+[ext_resource type="Texture2D" uid="uid://b4da8e7meaxtm" path="res://assets/random_img/Main_Menu.png" id="3_88e76"]
+[ext_resource type="FontFile" uid="uid://bxepin8t8l1u6" path="res://assets/fonts/CinzelDecorative-Regular.otf" id="4_knqa7"]
+[ext_resource type="AudioStream" uid="uid://533yw7uj1d6m" path="res://assets/hover.mp3" id="5_71k7c"]
+[ext_resource type="AudioStream" uid="uid://cmp333e25tsq1" path="res://assets/pressed.mp3" id="6_cmnsq"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ofnjo"]
+texture = ExtResource("1_v4r4p")
+
+[sub_resource type="Gradient" id="Gradient_1rgno"]
+colors = PackedColorArray(0, 0, 0, 0.87058824, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_4hnlu"]
+gradient = SubResource("Gradient_1rgno")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3o3g3"]
+texture = SubResource("GradientTexture1D_4hnlu")
+
+[sub_resource type="LabelSettings" id="LabelSettings_h5b1d"]
+font = ExtResource("2_1s2dm")
+font_size = 50
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Gradient" id="Gradient_avs0h"]
+offsets = PackedFloat32Array(0.285, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ar2xs"]
+gradient = SubResource("Gradient_avs0h")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jkjer"]
+texture = SubResource("GradientTexture2D_ar2xs")
+
+[node name="pause_menu" type="CanvasLayer" unique_id=882029895]
+process_mode = 3
+script = ExtResource("1_1s2dm")
+
+[node name="Panel" type="Panel" parent="." unique_id=1446203444]
+offset_left = 37.0
+offset_top = 24.0
+offset_right = 721.0
+offset_bottom = 387.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_ofnjo")
+
+[node name="Panel2" type="Panel" parent="." unique_id=1795195782]
+offset_left = 31.0
+offset_top = 24.0
+offset_right = 671.0
+offset_bottom = 388.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_3o3g3")
+
+[node name="Label" type="Label" parent="." unique_id=2110310074]
+offset_left = 145.0
+offset_top = 47.0
+offset_right = 363.0
+offset_bottom = 107.0
+text = "~ Game ~"
+label_settings = SubResource("LabelSettings_h5b1d")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="." unique_id=399653441]
+offset_left = 157.0
+offset_top = 91.0
+offset_right = 528.0
+offset_bottom = 151.0
+text = "Paused"
+label_settings = SubResource("LabelSettings_h5b1d")
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=125075216]
+position = Vector2(243, 156.99998)
+scale = Vector2(0.33558863, 0.62435985)
+texture = ExtResource("3_88e76")
+region_enabled = true
+region_rect = Rect2(462.3028, 665.36035, 739.3737, 58.481567)
+
+[node name="Game" type="Button" parent="." unique_id=788968702]
+offset_left = 34.0
+offset_top = 190.0
+offset_right = 482.0
+offset_bottom = 238.0
+theme_override_colors/font_color = Color(0.9529412, 0.9098039, 0.8117647, 1)
+theme_override_colors/font_pressed_color = Color(0.78431374, 0.5294118, 0.22745098, 1)
+theme_override_colors/font_hover_color = Color(0.9098039, 0.7058824, 0.36078432, 1)
+theme_override_fonts/font = ExtResource("4_knqa7")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxTexture_jkjer")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_jkjer")
+theme_override_styles/hover = SubResource("StyleBoxTexture_jkjer")
+text = "Resume"
+metadata/_edit_use_anchors_ = true
+
+[node name="Game2" type="Button" parent="." unique_id=886612145]
+offset_left = 32.0
+offset_top = 248.0
+offset_right = 489.0
+offset_bottom = 297.0
+theme_override_colors/font_color = Color(0.9529412, 0.9098039, 0.8117647, 1)
+theme_override_colors/font_pressed_color = Color(0.78431374, 0.5294118, 0.22745098, 1)
+theme_override_colors/font_hover_color = Color(0.9098039, 0.7058824, 0.36078432, 1)
+theme_override_fonts/font = ExtResource("4_knqa7")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxTexture_jkjer")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_jkjer")
+theme_override_styles/hover = SubResource("StyleBoxTexture_jkjer")
+text = "Restart"
+metadata/_edit_use_anchors_ = true
+
+[node name="Game3" type="Button" parent="." unique_id=22472753]
+offset_left = 43.0
+offset_top = 311.0
+offset_right = 481.0
+offset_bottom = 358.0
+theme_override_colors/font_color = Color(0.9529412, 0.9098039, 0.8117647, 1)
+theme_override_colors/font_pressed_color = Color(0.78431374, 0.5294118, 0.22745098, 1)
+theme_override_colors/font_hover_color = Color(0.9098039, 0.7058824, 0.36078432, 1)
+theme_override_fonts/font = ExtResource("4_knqa7")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxTexture_jkjer")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_jkjer")
+theme_override_styles/hover = SubResource("StyleBoxTexture_jkjer")
+text = "Main Menu"
+metadata/_edit_use_anchors_ = true
+
+[node name="hover1" type="AudioStreamPlayer" parent="." unique_id=479910347]
+stream = ExtResource("5_71k7c")
+
+[node name="pressed1" type="AudioStreamPlayer" parent="." unique_id=558415466]
+stream = ExtResource("6_cmnsq")
+
+[connection signal="pressed" from="Game" to="." method="_on_game_pressed"]
+[connection signal="pressed" from="Game2" to="." method="_on_game_2_pressed"]
+[connection signal="pressed" from="Game3" to="." method="_on_game_3_pressed"]
