@@ -8,6 +8,7 @@
 font = ExtResource("3_kyr24")
 font_size = 50
 font_color = Color(0.9999984, 0.9969751, 0.7472203, 1)
+shadow_color = Color(1, 1, 1, 1)
 
 [node name="clues_UI" type="Control" unique_id=1168798038]
 layout_mode = 3

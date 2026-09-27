@@ -9,10 +9,12 @@ script = ExtResource("1_8f2av")
 
 [node name="MenuMusic" type="AudioStreamPlayer" parent="." unique_id=403266225]
 stream = ExtResource("1_f6gl3")
+volume_db = -20.129
 autoplay = true
 parameters/looping = true
 
 [node name="GameMusic" type="AudioStreamPlayer" parent="." unique_id=925293638]
 stream = ExtResource("3_188bi")
+volume_db = -12.581
 autoplay = true
 parameters/looping = true
