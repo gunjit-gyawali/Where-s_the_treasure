@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://mxfujejdllj"]
+
+[ext_resource type="Texture2D" uid="uid://8vqmoiha6dpv" path="res://assets/random_img/40.png" id="1_gut0x"]
+[ext_resource type="Script" uid="uid://bxvfoikk7m4e8" path="res://scripts/clues.gd" id="1_ltb0c"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yw88p"]
+radius = 5.0
+
+[node name="clues" type="Node2D" unique_id=1893857142]
+script = ExtResource("1_ltb0c")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=952902284]
+position = Vector2(-3.9863327, -8.734375)
+scale = Vector2(0.022816265, 0.022816265)
+texture = ExtResource("1_gut0x")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1814360060]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2139155828]
+position = Vector2(-4, -9)
+shape = SubResource("CircleShape2D_yw88p")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -18,6 +18,8 @@
 [ext_resource type="FontFile" uid="uid://cmh8qi0a2srw5" path="res://assets/fonts/CinzelDecorative-Black.otf" id="17_m37eu"]
 [ext_resource type="PackedScene" uid="uid://b6k2nw2gupyhk" path="res://scenes/player.tscn" id="17_xlgje"]
 [ext_resource type="FontFile" uid="uid://detmcvufttd5" path="res://assets/fonts/silkscreen/slkscr.ttf" id="18_m37eu"]
+[ext_resource type="PackedScene" uid="uid://dcxa28hpis78w" path="res://scenes/clues_ui.tscn" id="19_6dxkl"]
+[ext_resource type="PackedScene" uid="uid://mxfujejdllj" path="res://scenes/clues.tscn" id="20_4tg4m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_djjcw"]
 texture = ExtResource("3_7sjgg")
@@ -279,6 +281,25 @@ font = ExtResource("18_m37eu")
 font_size = 8
 font_color = Color(0, 0, 0, 1)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yw88p"]
+size = Vector2(96.25, 50.731323)
+
+[sub_resource type="LabelSettings" id="LabelSettings_a6whi"]
+font = ExtResource("18_m37eu")
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Gradient" id="Gradient_4tg4m"]
+offsets = PackedFloat32Array(0, 0.5, 0.7181818)
+colors = PackedColorArray(0, 0, 0, 0.85882354, 0, 0, 0, 0.4392157, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_5ap4w"]
+gradient = SubResource("Gradient_4tg4m")
+fill_from = Vector2(0.3446602, 0.014563107)
+fill_to = Vector2(1, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sry7q"]
+texture = SubResource("GradientTexture2D_5ap4w")
+
 [node name="1st-World" type="Node2D" unique_id=975400702]
 y_sort_enabled = true
 script = ExtResource("1_itt41")
@@ -296,10 +317,10 @@ layer_2/y_sort_enabled = true
 layer_2/tile_data = PackedInt32Array(393238, 655372, 7, 1245208, 655372, 7, 917514, 655372, 7, 1179678, 524300, 6, 786432, 12, 1, 262156, 12, 1, 458770, 12, 0, 458769, 12, 0, 458780, 12, 0, 1310741, 393228, 7, 458774, 327692, 0, 786435, 65537, 2, 917521, 327692, 0, 1310747, 12, 5, 589824, 131073, 3, 589825, 196609, 0, 655361, 65537, 2, 655362, 196609, 0, 720898, 65537, 2, 720899, 196609, 0, 786436, 131073, 3, 786437, 196609, 0, 851973, 65537, 2, 851974, 131073, 3, 851975, 131073, 3, 851976, 131073, 3, 851977, 131073, 3, 851978, 131073, 3, 851979, 131073, 3, 851980, 131073, 3, 851981, 131073, 3, 851982, 131073, 3, 851983, 131073, 3, 851984, 131073, 3, 851985, 131073, 3, 851986, 131073, 3, 851987, 131073, 3, 851988, 131073, 3, 851989, 196609, 3, 327687, 131073, 3, 327688, 131073, 3, 327689, 131073, 3, 327690, 131073, 3, 327691, 131073, 3, 262150, 196609, 0, 262149, 65537, 2, 327686, 65537, 2, 65541, 196609, 0, 131077, 1, 1, 196613, 1, 1, 65540, 131073, 3, 65539, 131073, 3, 65538, 131073, 3, 65537, 131073, 3, 65536, 131073, 3, 327692, 196609, 3, 196625, 12, 5, 458784, 12, 5, 196648, 12, 5, 852016, 12, 5, 1114118, 12, 5, 1310757, 12, 5, 327704, 524300, 6, 131093, 524300, 6, 131101, 524300, 6, 655399, 524300, 6, 589874, 524300, 6, 1179698, 524300, 6, 983070, 524300, 6, 1179681, 524300, 6, 1114124, 524300, 6, 1376268, 524300, 6, 1376259, 524300, 6, 1376300, 524300, 6, 131081, 524300, 6, 589850, 655372, 7, 1179694, 655372, 7, 327725, 655372, 7, 262177, 655372, 7, 1245193, 655372, 7, 655391, 12, 1, 1048620, 12, 1, 983061, 12, 1, 458773, 12, 1, 589841, 12, 1, 1376296, 12, 1, 1114160, 12, 0, 589859, 12, 0, 393252, 655372, 0, 1376290, 655372, 0, 983086, 655372, 0)
 
 [node name="player" parent="." unique_id=1278274472 instance=ExtResource("17_xlgje")]
-position = Vector2(158, 101)
+position = Vector2(-124, 10)
 
 [node name="enemy" parent="." unique_id=1642957285 instance=ExtResource("16_7p2n8")]
-position = Vector2(396, 189)
+position = Vector2(408, 185)
 
 [node name="Label" type="Label" parent="." unique_id=679678348]
 offset_left = 36.0
@@ -318,3 +339,53 @@ offset_bottom = 205.0
 text = "   Kill the enemy
  to get the clues"
 label_settings = SubResource("LabelSettings_n27jj")
+
+[node name="Area2D2" type="Area2D" parent="." unique_id=1570915146]
+position = Vector2(811, 32)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D2" unique_id=1081560505]
+position = Vector2(-5, -18)
+rotation = 0.7574729
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_yw88p")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=156951483]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2088082311]
+position = Vector2(804, 331)
+shape = SubResource("RectangleShape2D_yw88p")
+
+[node name="Label3" type="Label" parent="." unique_id=1514007955]
+offset_left = 650.0
+offset_top = 139.0
+offset_right = 720.0
+offset_bottom = 162.0
+text = "Boss Lair"
+label_settings = SubResource("LabelSettings_a6whi")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=812492521]
+offset = Vector2(8, 8)
+transform = Transform2D(1, 0, 0, 1, 8, 8)
+
+[node name="Panel2" type="Panel" parent="CanvasLayer" unique_id=1512494539]
+offset_left = -182.0
+offset_top = -47.999992
+offset_right = 175.0
+offset_bottom = 176.0
+rotation = -0.2617994
+theme_override_styles/panel = SubResource("StyleBoxTexture_sry7q")
+
+[node name="clues_UI" parent="CanvasLayer" unique_id=1168798038 instance=ExtResource("19_6dxkl")]
+offset_left = -18.0
+offset_top = 12.0
+offset_right = -18.0
+offset_bottom = 12.0
+
+[node name="clues" parent="." unique_id=1893857142 instance=ExtResource("20_4tg4m")]
+position = Vector2(219, 150)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

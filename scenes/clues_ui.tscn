@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://dcxa28hpis78w"]
+
+[ext_resource type="Script" uid="uid://b4brmy73tpb12" path="res://scripts/clues_ui.gd" id="1_f7u08"]
+[ext_resource type="Texture2D" uid="uid://8vqmoiha6dpv" path="res://assets/random_img/40.png" id="1_klcpc"]
+[ext_resource type="FontFile" uid="uid://detmcvufttd5" path="res://assets/fonts/silkscreen/slkscr.ttf" id="3_kyr24"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_yw88p"]
+font = ExtResource("3_kyr24")
+font_size = 50
+font_color = Color(0.9999984, 0.9969751, 0.7472203, 1)
+
+[node name="clues_UI" type="Control" unique_id=1168798038]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_f7u08")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1493862334]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 9.0
+offset_right = 74.17109
+offset_bottom = 56.0
+texture = ExtResource("1_klcpc")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="." unique_id=1146814172]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 7.0
+offset_right = 125.0
+offset_bottom = 58.0
+text = "0"
+label_settings = SubResource("LabelSettings_yw88p")
