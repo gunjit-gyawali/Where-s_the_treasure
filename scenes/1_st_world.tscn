@@ -276,7 +276,7 @@ sources/13 = SubResource("TileSetAtlasSource_mx7qb")
 
 [sub_resource type="LabelSettings" id="LabelSettings_yw88p"]
 font = ExtResource("17_m37eu")
-font_size = 18
+font_size = 11
 font_color = Color(5.1608413e-06, 5.160842e-06, 5.1608413e-06, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_n27jj"]
@@ -363,12 +363,21 @@ position = Vector2(614, 117)
 position = Vector2(472, 267)
 
 [node name="Label" type="Label" parent="." unique_id=679678348]
-offset_left = 36.0
-offset_top = 120.0
-offset_right = 211.0
-offset_bottom = 167.0
+offset_left = 142.0
+offset_top = 166.0
+offset_right = 317.0
+offset_bottom = 213.0
 text = "            The Lost 
            Treasure "
+label_settings = SubResource("LabelSettings_yw88p")
+
+[node name="Label7" type="Label" parent="." unique_id=1399343585]
+offset_left = 74.0
+offset_top = 111.0
+offset_right = 249.0
+offset_bottom = 158.0
+text = "wasd - move 
+Space - attack"
 label_settings = SubResource("LabelSettings_yw88p")
 
 [node name="Label2" type="Label" parent="." unique_id=1136507928]
@@ -429,10 +438,10 @@ rotation = -0.2617994
 theme_override_styles/panel = SubResource("StyleBoxTexture_sry7q")
 
 [node name="clues_UI" parent="CanvasLayer" unique_id=1168798038 instance=ExtResource("19_6dxkl")]
-offset_left = -18.0
-offset_top = 12.0
-offset_right = -18.0
-offset_bottom = 12.0
+offset_left = -19.0
+offset_top = 20.0
+offset_right = -19.0
+offset_bottom = 20.0
 
 [node name="clues" parent="." unique_id=1893857142 instance=ExtResource("20_4tg4m")]
 position = Vector2(264, 72)

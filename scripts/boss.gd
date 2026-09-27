@@ -81,6 +81,8 @@ func deal_damage():
 				is_dead = true
 				velocity = Vector2.ZERO
 				$after_death.start()
+				$enemy_hitbox.queue_free()
+				$detection_area.queue_free()
 				$AnimatedSprite2D.play("death")
 
 
