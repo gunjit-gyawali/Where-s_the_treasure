@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://06e2me3182e1" path="res://assets/mystic_woods/particles/dust_particles_01.png" id="13_difll"]
 [ext_resource type="PackedScene" uid="uid://b6k2nw2gupyhk" path="res://scenes/player.tscn" id="14_d2fc6"]
 [ext_resource type="PackedScene" uid="uid://dr2dbw7xp8od4" path="res://scenes/enemy.tscn" id="15_0cvqt"]
+[ext_resource type="PackedScene" uid="uid://cxmr2owtyrp2x" path="res://scenes/boss.tscn" id="16_nakrq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v5ooj"]
 texture = ExtResource("1_opfhh")
@@ -272,6 +273,7 @@ sources/12 = SubResource("TileSetAtlasSource_kjutx")
 sources/13 = SubResource("TileSetAtlasSource_nj5nb")
 
 [node name="Boss_lair" type="Node2D" unique_id=1381440339]
+y_sort_enabled = true
 
 [node name="TileMap" type="TileMap" parent="." unique_id=1053856018]
 y_sort_enabled = true
@@ -292,13 +294,21 @@ position = Vector2(-127, 232)
 position = Vector2(111, 239)
 
 [node name="enemy3" parent="." unique_id=331680773 instance=ExtResource("15_0cvqt")]
+visible = false
 position = Vector2(522, 119)
 
 [node name="AnimatedSprite2D" parent="enemy3" index="0" unique_id=748333438]
 position = Vector2(4.0000134, -10.000003)
 scale = Vector2(5.7343755, 5.7343755)
+animation = &"idle"
+
+[node name="CollisionShape2D" parent="enemy3/enemy_hitbox" parent_id_path=PackedInt32Array(331680773, 1324942854) index="0" unique_id=1085795386]
+position = Vector2(0, -4)
 
 [node name="enemy2" parent="." unique_id=610982177 instance=ExtResource("15_0cvqt")]
 position = Vector2(187, 225)
+
+[node name="boss" parent="." unique_id=964592590 instance=ExtResource("16_nakrq")]
+position = Vector2(436, 104)
 
 [editable path="enemy3"]

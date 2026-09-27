@@ -34,5 +34,5 @@ offset_left = 85.0
 offset_top = 7.0
 offset_right = 125.0
 offset_bottom = 58.0
-text = "0"
+text = "_"
 label_settings = SubResource("LabelSettings_yw88p")

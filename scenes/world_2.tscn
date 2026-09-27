@@ -19,16 +19,16 @@
 [ext_resource type="PackedScene" uid="uid://mxfujejdllj" path="res://scenes/clues.tscn" id="17_rg7ok"]
 [ext_resource type="FontFile" uid="uid://cmh8qi0a2srw5" path="res://assets/fonts/CinzelDecorative-Black.otf" id="18_pvi7j"]
 [ext_resource type="PackedScene" uid="uid://dcxa28hpis78w" path="res://scenes/clues_ui.tscn" id="19_5wjeq"]
-[ext_resource type="PackedScene" uid="uid://bfatumrlb6xcg" path="res://scenes/pause_menu.tscn" id="20_f53ia"]
+[ext_resource type="FontFile" uid="uid://detmcvufttd5" path="res://assets/fonts/silkscreen/slkscr.ttf" id="20_f53ia"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7uo55"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5wjeq"]
 texture = ExtResource("1_axyqp")
 0:0/0 = 0
 1:0/0 = 0
 0:1/0 = 0
 1:1/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s8ivg"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f53ia"]
 texture = ExtResource("2_3m0gu")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -63,14 +63,14 @@ texture = ExtResource("2_3m0gu")
 3:3/0 = 0
 3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3.507245, -6.384985, 5.305832, -5.845409, 5.485691, -0.9892225, 3.9084153, 0.062149882, 4.586397, 4.7662563, 2.428093, 5.66555, 2.428093, 8, -1.528799, 8, -1.7086582, 5.1259747, -4.406539, 4.586397, -4.9461155, -0.62950516, -5.305833, -4.406539)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ab5jv"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7uo55"]
 texture = ExtResource("3_a2svu")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rbd1q"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s8ivg"]
 texture = ExtResource("4_emu1g")
 0:0/0 = 0
 0:0/0/y_sort_origin = 2
@@ -102,7 +102,7 @@ texture = ExtResource("4_emu1g")
 10:7/0 = 0
 10:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4.856185, -8, 4.856186, -8, 8, -3.2374573, 11.51096, 4.1367507, 9.71237, 9.172795, -6.6547737, 8, -12.050535, 6.295055, -10.971382, -2.1583052)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3xk2h"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ab5jv"]
 texture = ExtResource("5_hvdyd")
 0:0/0 = 0
 1:0/0 = 0
@@ -111,11 +111,11 @@ texture = ExtResource("5_hvdyd")
 4:0/0 = 0
 5:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gph3w"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rbd1q"]
 texture = ExtResource("3_o7h1l")
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0airf"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3xk2h"]
 texture = ExtResource("4_rwd0d")
 0:4/size_in_atlas = Vector2i(1, 3)
 0:4/0 = 0
@@ -187,7 +187,7 @@ texture = ExtResource("4_rwd0d")
 5:5/0 = 0
 4:5/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8rca2"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gph3w"]
 texture = ExtResource("8_co50f")
 0:0/0 = 0
 1:0/0 = 0
@@ -221,17 +221,17 @@ texture = ExtResource("8_co50f")
 4:5/0 = 0
 5:5/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j8pyg"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0airf"]
 texture = ExtResource("9_rg7ok")
 0:0/0 = 0
 1:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pg8nx"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8rca2"]
 texture = ExtResource("10_pvi7j")
 0:0/0 = 0
 1:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hmty3"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j8pyg"]
 texture = ExtResource("11_5wjeq")
 0:0/0 = 0
 1:0/0 = 0
@@ -249,28 +249,28 @@ texture = ExtResource("11_5wjeq")
 3:2/0 = 0
 4:2/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0fc1a"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pg8nx"]
 texture = ExtResource("12_f53ia")
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1ixkb"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hmty3"]
 texture = ExtResource("13_7uo55")
 
 [sub_resource type="TileSet" id="TileSet_i08kd"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_7uo55")
-sources/1 = SubResource("TileSetAtlasSource_s8ivg")
-sources/2 = SubResource("TileSetAtlasSource_gph3w")
-sources/3 = SubResource("TileSetAtlasSource_0airf")
-sources/4 = SubResource("TileSetAtlasSource_8rca2")
-sources/5 = SubResource("TileSetAtlasSource_j8pyg")
-sources/6 = SubResource("TileSetAtlasSource_pg8nx")
-sources/7 = SubResource("TileSetAtlasSource_hmty3")
-sources/8 = SubResource("TileSetAtlasSource_0fc1a")
-sources/9 = SubResource("TileSetAtlasSource_1ixkb")
-sources/10 = SubResource("TileSetAtlasSource_ab5jv")
-sources/12 = SubResource("TileSetAtlasSource_rbd1q")
-sources/13 = SubResource("TileSetAtlasSource_3xk2h")
+sources/0 = SubResource("TileSetAtlasSource_5wjeq")
+sources/1 = SubResource("TileSetAtlasSource_f53ia")
+sources/2 = SubResource("TileSetAtlasSource_rbd1q")
+sources/3 = SubResource("TileSetAtlasSource_3xk2h")
+sources/4 = SubResource("TileSetAtlasSource_gph3w")
+sources/5 = SubResource("TileSetAtlasSource_0airf")
+sources/6 = SubResource("TileSetAtlasSource_8rca2")
+sources/7 = SubResource("TileSetAtlasSource_j8pyg")
+sources/8 = SubResource("TileSetAtlasSource_pg8nx")
+sources/9 = SubResource("TileSetAtlasSource_hmty3")
+sources/10 = SubResource("TileSetAtlasSource_7uo55")
+sources/12 = SubResource("TileSetAtlasSource_s8ivg")
+sources/13 = SubResource("TileSetAtlasSource_ab5jv")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_co50f"]
 atlas = ExtResource("3_a2svu")
@@ -327,20 +327,24 @@ size = Vector2(27.5, 63.5)
 
 [sub_resource type="LabelSettings" id="LabelSettings_yw88p"]
 font = ExtResource("18_pvi7j")
-font_size = 30
+font_size = 19
 font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Gradient" id="Gradient_f53ia"]
 offsets = PackedFloat32Array(0, 0.5, 0.7181818)
 colors = PackedColorArray(0, 0, 0, 0.85882354, 0, 0, 0, 0.4392157, 0, 0, 0, 0)
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_5ap4w"]
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_7uo55"]
 gradient = SubResource("Gradient_f53ia")
 fill_from = Vector2(0.3446602, 0.014563107)
 fill_to = Vector2(1, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7uo55"]
-texture = SubResource("GradientTexture2D_5ap4w")
+texture = SubResource("GradientTexture2D_7uo55")
+
+[sub_resource type="LabelSettings" id="LabelSettings_s8ivg"]
+font = ExtResource("20_f53ia")
+font_size = 8
 
 [node name="world_2" type="Node2D" unique_id=1701117041]
 y_sort_enabled = true
@@ -361,37 +365,39 @@ layer_2/tile_data = PackedInt32Array(786435, 65537, 2, 589824, 131073, 3, 589825
 [node name="player" parent="." unique_id=1278274472 instance=ExtResource("14_emu1g")]
 position = Vector2(-117, -28)
 
-[node name="enemy" parent="." unique_id=1642957285 instance=ExtResource("15_hvdyd")]
+[node name="enemies" type="Node" parent="." unique_id=1035691836]
+
+[node name="enemy" parent="enemies" unique_id=1642957285 instance=ExtResource("15_hvdyd")]
 position = Vector2(139, 121)
 
-[node name="enemy2" parent="." unique_id=637575389 instance=ExtResource("15_hvdyd")]
+[node name="enemy2" parent="enemies" unique_id=637575389 instance=ExtResource("15_hvdyd")]
 position = Vector2(124, 272)
 
-[node name="enemy3" parent="." unique_id=1874889286 instance=ExtResource("15_hvdyd")]
+[node name="enemy3" parent="enemies" unique_id=1874889286 instance=ExtResource("15_hvdyd")]
 position = Vector2(51, 346)
 
-[node name="enemy4" parent="." unique_id=187432540 instance=ExtResource("15_hvdyd")]
+[node name="enemy4" parent="enemies" unique_id=187432540 instance=ExtResource("15_hvdyd")]
 position = Vector2(242, 315)
 
-[node name="enemy5" parent="." unique_id=1849725795 instance=ExtResource("15_hvdyd")]
+[node name="enemy5" parent="enemies" unique_id=1849725795 instance=ExtResource("15_hvdyd")]
 position = Vector2(560, 284)
 
-[node name="enemy6" parent="." unique_id=1224218634 instance=ExtResource("15_hvdyd")]
+[node name="enemy6" parent="enemies" unique_id=1224218634 instance=ExtResource("15_hvdyd")]
 position = Vector2(429, 103)
 
-[node name="enemy7" parent="." unique_id=1912346408 instance=ExtResource("15_hvdyd")]
+[node name="enemy7" parent="enemies" unique_id=1912346408 instance=ExtResource("15_hvdyd")]
 position = Vector2(567, 79)
 
-[node name="enemy8" parent="." unique_id=434474242 instance=ExtResource("15_hvdyd")]
+[node name="enemy8" parent="enemies" unique_id=434474242 instance=ExtResource("15_hvdyd")]
 position = Vector2(241, 40)
 
-[node name="enemy9" parent="." unique_id=1610662859 instance=ExtResource("15_hvdyd")]
+[node name="enemy9" parent="enemies" unique_id=1610662859 instance=ExtResource("15_hvdyd")]
 position = Vector2(699, 343)
 
-[node name="enemy10" parent="." unique_id=281391092 instance=ExtResource("15_hvdyd")]
+[node name="enemy10" parent="enemies" unique_id=281391092 instance=ExtResource("15_hvdyd")]
 position = Vector2(738, 114)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=92520411]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="enemies" unique_id=92520411]
 position = Vector2(186, 226)
 sprite_frames = SubResource("SpriteFrames_n27jj")
 autoplay = "default"
@@ -437,15 +443,14 @@ position = Vector2(616, 60)
 position = Vector2(753, 317)
 
 [node name="Label" type="Label" parent="." unique_id=276885601]
-offset_left = 706.0
-offset_top = 198.0
-offset_right = 810.0
-offset_bottom = 234.0
-text = "Lobby"
+offset_left = 662.0
+offset_top = 202.0
+offset_right = 822.0
+offset_bottom = 238.0
+text = "Traning Area"
 label_settings = SubResource("LabelSettings_yw88p")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1780948701]
-visible = false
 offset = Vector2(8, 8)
 transform = Transform2D(1, 0, 0, 1, 8, 8)
 
@@ -458,12 +463,17 @@ rotation = -0.2617994
 theme_override_styles/panel = SubResource("StyleBoxTexture_7uo55")
 
 [node name="clues_UI" parent="CanvasLayer" unique_id=1168798038 instance=ExtResource("19_5wjeq")]
-offset_left = -1.0
-offset_top = 1.0
-offset_right = -1.0
-offset_bottom = 1.0
+offset_left = 6.0
+offset_top = 11.0
+offset_right = 6.0
+offset_bottom = 11.0
 
-[node name="pause_menu" parent="." unique_id=882029895 instance=ExtResource("20_f53ia")]
-layer = 2
+[node name="Label4" type="Label" parent="." unique_id=1644681878]
+offset_left = 682.0
+offset_top = 226.0
+offset_right = 808.0
+offset_bottom = 249.0
+text = " 16 Clues  reqiored"
+label_settings = SubResource("LabelSettings_s8ivg")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

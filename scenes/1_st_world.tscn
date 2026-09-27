@@ -408,6 +408,14 @@ offset_bottom = 162.0
 text = "Boss Lair"
 label_settings = SubResource("LabelSettings_a6whi")
 
+[node name="Label6" type="Label" parent="." unique_id=1914388463]
+offset_left = 629.0
+offset_top = 302.0
+offset_right = 721.0
+offset_bottom = 325.0
+text = "Next Area"
+label_settings = SubResource("LabelSettings_a6whi")
+
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=812492521]
 offset = Vector2(8, 8)
 transform = Transform2D(1, 0, 0, 1, 8, 8)
@@ -451,12 +459,11 @@ position = Vector2(482, 47)
 position = Vector2(362, 102)
 
 [node name="Label4" type="Label" parent="." unique_id=1041872962]
-offset_left = 682.0
-offset_top = 295.0
-offset_right = 808.0
-offset_bottom = 318.0
-text = " 8 Clues 
- reqiored"
+offset_left = 631.0
+offset_top = 318.0
+offset_right = 757.0
+offset_bottom = 341.0
+text = " 8 Clues reqiored"
 label_settings = SubResource("LabelSettings_hlm2v")
 
 [node name="Label5" type="Label" parent="." unique_id=1533043139]

@@ -68,7 +68,6 @@ func deal_damage():
 			health = health - 20
 			$take_damage_cooldown.start()
 			can_take_damage = false
-			print("slime health", health)
 			if health <= 0:
 				self.queue_free()
 

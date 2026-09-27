@@ -6,7 +6,9 @@ extends CharacterBody2D
 
 var can_take_damage = true
 
-var health = 200
+var is_dead = false
+
+var health = 100
 var player_inattack_zone = false
 
 var player: Node2D = null
@@ -64,14 +66,23 @@ func _on_enemy_hitbox_body_exited(body: Node2D) -> void:
 		player_inattack_zone = false
 		
 func deal_damage():
-	if player_inattack_zone and Global.current_player_attack == true :
-		if can_take_damage == true:
-			health = health - 20
+	if is_dead:
+		return
+
+	if player_inattack_zone and Global.current_player_attack:
+		if can_take_damage:
+			health -= 10
 			$take_damage_cooldown.start()
 			can_take_damage = false
-			print("slime health", health)
+
+			print("boss health: ", health)
+
 			if health <= 0:
-				self.queue_free()
+				is_dead = true
+				velocity = Vector2.ZERO
+				$after_death.start()
+				$AnimatedSprite2D.play("death")
+
 
 
 func _on_take_damage_cooldown_timeout() -> void:
@@ -80,7 +91,11 @@ func _on_take_damage_cooldown_timeout() -> void:
 func update_health():
 	var healthbar = $healthbar
 	healthbar.value = health
-	if health == 200:
+	if health == 100:
 		healthbar.visible = false
 	else:
 		healthbar.visible = true
+
+
+func _on_after_death_timeout() -> void:
+	get_tree().change_scene_to_file("res://scenes/end.tscn")

@@ -14,11 +14,11 @@ texture = ExtResource("2_3ct5u")
 [sub_resource type="Gradient" id="Gradient_dj235"]
 colors = PackedColorArray(0, 0, 0, 0.87058824, 0, 0, 0, 0)
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_ne61v"]
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_mhy3k"]
 gradient = SubResource("Gradient_dj235")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t4ho2"]
-texture = SubResource("GradientTexture1D_ne61v")
+texture = SubResource("GradientTexture1D_mhy3k")
 
 [sub_resource type="LabelSettings" id="LabelSettings_l8tid"]
 font = ExtResource("3_83q2r")
@@ -29,11 +29,11 @@ shadow_color = Color(0, 0, 0, 1)
 offsets = PackedFloat32Array(0.285, 1)
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_xgkdp"]
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_3ct5u"]
 gradient = SubResource("Gradient_anb04")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lbgia"]
-texture = SubResource("GradientTexture2D_xgkdp")
+texture = SubResource("GradientTexture2D_3ct5u")
 
 [node name="you_died" type="Node2D" unique_id=1441084732]
 script = ExtResource("1_mhy3k")

@@ -135,7 +135,6 @@ func enemy_attack() -> void:
 		health -= 20
 		enemy_attack_cooldown = false
 		$attack_cooldown.start()
-		print(health)
 
 
 func _on_attack_cooldown_timeout() -> void:
