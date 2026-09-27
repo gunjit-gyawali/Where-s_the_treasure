@@ -49,17 +49,17 @@ offset_bottom = 654.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_n27jj")
 
 [node name="Label" type="Label" parent="." unique_id=1791091536]
-offset_left = 173.0
+offset_left = 174.0
 offset_top = 104.0
-offset_right = 343.0
+offset_right = 344.0
 offset_bottom = 164.0
 text = "~ The ~"
 label_settings = SubResource("LabelSettings_7fhwk")
 
 [node name="Label2" type="Label" parent="." unique_id=2094696346]
-offset_left = 85.0
+offset_left = 86.0
 offset_top = 162.0
-offset_right = 456.0
+offset_right = 457.0
 offset_bottom = 222.0
 text = "Lost Treasure"
 label_settings = SubResource("LabelSettings_7fhwk")
