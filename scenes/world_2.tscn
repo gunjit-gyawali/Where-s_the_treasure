@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dh1iuj5trhgal" path="res://assets/mystic_woods/tilesets/decor_8x8.png" id="1_axyqp"]
 [ext_resource type="Script" uid="uid://546l2fqbps8f" path="res://scripts/world_2.gd" id="1_co50f"]
 [ext_resource type="Texture2D" uid="uid://b6wx6cofpe6f7" path="res://assets/mystic_woods/tilesets/fences.png" id="2_3m0gu"]
+[ext_resource type="PackedScene" uid="uid://bfatumrlb6xcg" path="res://scenes/pause_menu.tscn" id="2_7uo55"]
 [ext_resource type="Texture2D" uid="uid://c3yuduhb4xj80" path="res://assets/mystic_woods/objects/chest_01.png" id="3_a2svu"]
 [ext_resource type="Texture2D" uid="uid://dumeqeb3qhgk5" path="res://assets/mystic_woods/tilesets/grass.png" id="3_o7h1l"]
 [ext_resource type="Texture2D" uid="uid://dl8o2agbe8adi" path="res://assets/mystic_woods/objects/objects.png" id="4_emu1g"]
@@ -475,5 +476,10 @@ offset_right = 808.0
 offset_bottom = 249.0
 text = " 16 Clues  reqiored"
 label_settings = SubResource("LabelSettings_s8ivg")
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=315998884]
+layer = 2
+
+[node name="pause_menu" parent="CanvasLayer2" unique_id=1274772645 instance=ExtResource("2_7uo55")]
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

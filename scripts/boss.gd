@@ -100,4 +100,4 @@ func update_health():
 
 
 func _on_after_death_timeout() -> void:
-	get_tree().change_scene_to_file("res://scenes/end.tscn")
+	get_tree().change_scene_to_file("res://scenes/treasure.tscn")

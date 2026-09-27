@@ -41,44 +41,50 @@ layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_1s2dm")
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1712284903]
+layout_mode = 0
+offset_right = 1170.0
+offset_bottom = 656.0
+color = Color(0.38431373, 0.38431373, 0.38431373, 0.72156864)
+
 [node name="Panel" type="Panel" parent="." unique_id=1446203444]
 layout_mode = 0
-offset_left = 37.0
-offset_top = 24.0
-offset_right = 721.0
-offset_bottom = 387.0
+offset_left = 266.0
+offset_top = 146.0
+offset_right = 950.0
+offset_bottom = 509.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_ofnjo")
 
 [node name="Panel2" type="Panel" parent="." unique_id=1795195782]
 layout_mode = 0
-offset_left = 31.0
-offset_top = 24.0
-offset_right = 671.0
-offset_bottom = 388.0
+offset_left = 260.0
+offset_top = 146.0
+offset_right = 900.0
+offset_bottom = 510.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_3o3g3")
 
 [node name="Label" type="Label" parent="." unique_id=2110310074]
 layout_mode = 0
-offset_left = 145.0
-offset_top = 47.0
-offset_right = 363.0
-offset_bottom = 107.0
+offset_left = 374.0
+offset_top = 169.0
+offset_right = 592.0
+offset_bottom = 229.0
 text = "~ Game ~"
 label_settings = SubResource("LabelSettings_h5b1d")
 metadata/_edit_use_anchors_ = true
 
 [node name="Label2" type="Label" parent="." unique_id=399653441]
 layout_mode = 0
-offset_left = 157.0
-offset_top = 91.0
-offset_right = 528.0
-offset_bottom = 151.0
+offset_left = 386.0
+offset_top = 213.0
+offset_right = 757.0
+offset_bottom = 273.0
 text = "Paused"
 label_settings = SubResource("LabelSettings_h5b1d")
 metadata/_edit_use_anchors_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=125075216]
-position = Vector2(243, 156.99998)
+position = Vector2(472, 279)
 scale = Vector2(0.33558863, 0.62435985)
 texture = ExtResource("3_88e76")
 region_enabled = true
@@ -86,10 +92,10 @@ region_rect = Rect2(462.3028, 665.36035, 739.3737, 58.481567)
 
 [node name="Game" type="Button" parent="." unique_id=788968702]
 layout_mode = 0
-offset_left = 34.0
-offset_top = 190.0
-offset_right = 482.0
-offset_bottom = 238.0
+offset_left = 263.0
+offset_top = 312.0
+offset_right = 711.0
+offset_bottom = 360.0
 theme_override_colors/font_color = Color(0.9529412, 0.9098039, 0.8117647, 1)
 theme_override_colors/font_pressed_color = Color(0.78431374, 0.5294118, 0.22745098, 1)
 theme_override_colors/font_hover_color = Color(0.9098039, 0.7058824, 0.36078432, 1)
@@ -103,10 +109,10 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Game2" type="Button" parent="." unique_id=886612145]
 layout_mode = 0
-offset_left = 32.0
-offset_top = 248.0
-offset_right = 489.0
-offset_bottom = 297.0
+offset_left = 261.0
+offset_top = 370.0
+offset_right = 718.0
+offset_bottom = 419.0
 theme_override_colors/font_color = Color(0.9529412, 0.9098039, 0.8117647, 1)
 theme_override_colors/font_pressed_color = Color(0.78431374, 0.5294118, 0.22745098, 1)
 theme_override_colors/font_hover_color = Color(0.9098039, 0.7058824, 0.36078432, 1)
@@ -120,10 +126,10 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Game3" type="Button" parent="." unique_id=22472753]
 layout_mode = 0
-offset_left = 43.0
-offset_top = 311.0
-offset_right = 481.0
-offset_bottom = 358.0
+offset_left = 272.0
+offset_top = 433.0
+offset_right = 710.0
+offset_bottom = 480.0
 theme_override_colors/font_color = Color(0.9529412, 0.9098039, 0.8117647, 1)
 theme_override_colors/font_pressed_color = Color(0.78431374, 0.5294118, 0.22745098, 1)
 theme_override_colors/font_hover_color = Color(0.9098039, 0.7058824, 0.36078432, 1)
@@ -142,3 +148,5 @@ stream = ExtResource("5_71k7c")
 stream = ExtResource("6_cmnsq")
 
 [connection signal="pressed" from="Game" to="." method="_on_game_pressed"]
+[connection signal="pressed" from="Game2" to="." method="_on_game_2_pressed"]
+[connection signal="pressed" from="Game3" to="." method="_on_game_3_pressed"]

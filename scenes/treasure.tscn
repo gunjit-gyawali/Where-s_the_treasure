@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://cxxill33o6uf4"]
+
+[ext_resource type="Script" uid="uid://dussw3mrhmnrt" path="res://scripts/treasure.gd" id="1_6chw8"]
+[ext_resource type="Texture2D" uid="uid://b0qgwfivgxrmr" path="res://assets/random_img/treasure.jpg" id="1_h5oxq"]
+[ext_resource type="FontFile" uid="uid://tmsfvoyluqes" path="res://assets/fonts/Cinzel-Regular.otf" id="2_6chw8"]
+[ext_resource type="Texture2D" uid="uid://b4da8e7meaxtm" path="res://assets/random_img/Main_Menu.png" id="3_jd7h6"]
+[ext_resource type="FontFile" uid="uid://bxepin8t8l1u6" path="res://assets/fonts/CinzelDecorative-Regular.otf" id="4_5h3dt"]
+[ext_resource type="AudioStream" uid="uid://533yw7uj1d6m" path="res://assets/hover.mp3" id="5_816p8"]
+[ext_resource type="AudioStream" uid="uid://cmp333e25tsq1" path="res://assets/pressed.mp3" id="6_awv35"]
+
+[sub_resource type="Gradient" id="Gradient_06t4b"]
+colors = PackedColorArray(0, 0, 0, 0.87058824, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ne61v"]
+gradient = SubResource("Gradient_06t4b")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_367ea"]
+texture = SubResource("GradientTexture1D_ne61v")
+
+[sub_resource type="LabelSettings" id="LabelSettings_nwrwc"]
+font = ExtResource("2_6chw8")
+font_size = 50
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Gradient" id="Gradient_xbnoy"]
+offsets = PackedFloat32Array(0.285, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_xgkdp"]
+gradient = SubResource("Gradient_xbnoy")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vp2tf"]
+texture = SubResource("GradientTexture2D_xgkdp")
+
+[node name="treasure" type="Node2D" unique_id=1938473866]
+script = ExtResource("1_6chw8")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=265237912]
+position = Vector2(574, 324)
+scale = Vector2(2.234375, 1.265625)
+texture = ExtResource("1_h5oxq")
+
+[node name="Panel2" type="Panel" parent="." unique_id=137968310]
+offset_right = 1637.0
+offset_bottom = 672.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_367ea")
+
+[node name="Label" type="Label" parent="." unique_id=1735319524]
+offset_left = 59.0
+offset_top = 88.0
+offset_right = 375.0
+offset_bottom = 148.0
+text = "~ You have found ~"
+label_settings = SubResource("LabelSettings_nwrwc")
+
+[node name="Label2" type="Label" parent="." unique_id=58665369]
+offset_left = 77.0
+offset_top = 148.0
+offset_right = 554.0
+offset_bottom = 208.0
+text = "the Lost Treasure"
+label_settings = SubResource("LabelSettings_nwrwc")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=827602177]
+position = Vector2(279.2991, 232.89355)
+scale = Vector2(0.62435967, 0.62435985)
+texture = ExtResource("3_jd7h6")
+region_enabled = true
+region_rect = Rect2(462.3028, 665.36035, 739.3737, 58.481567)
+
+[node name="Game" type="Button" parent="." unique_id=1539537350]
+offset_left = 35.0
+offset_top = 304.0
+offset_right = 514.0
+offset_bottom = 399.0
+theme_override_colors/font_color = Color(0.9529412, 0.9098039, 0.8117647, 1)
+theme_override_colors/font_pressed_color = Color(0.78431374, 0.5294118, 0.22745098, 1)
+theme_override_colors/font_hover_color = Color(0.9098039, 0.7058824, 0.36078432, 1)
+theme_override_fonts/font = ExtResource("4_5h3dt")
+theme_override_font_sizes/font_size = 52
+theme_override_styles/normal = SubResource("StyleBoxTexture_vp2tf")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_vp2tf")
+theme_override_styles/hover = SubResource("StyleBoxTexture_vp2tf")
+text = "Continue"
+
+[node name="hover1" type="AudioStreamPlayer" parent="." unique_id=1772809531]
+stream = ExtResource("5_816p8")
+
+[node name="pressed1" type="AudioStreamPlayer" parent="." unique_id=1134960190]
+stream = ExtResource("6_awv35")
+
+[connection signal="pressed" from="Game" to="." method="_on_game_pressed"]

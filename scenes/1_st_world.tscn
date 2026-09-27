@@ -20,6 +20,7 @@
 [ext_resource type="FontFile" uid="uid://detmcvufttd5" path="res://assets/fonts/silkscreen/slkscr.ttf" id="18_m37eu"]
 [ext_resource type="PackedScene" uid="uid://dcxa28hpis78w" path="res://scenes/clues_ui.tscn" id="19_6dxkl"]
 [ext_resource type="PackedScene" uid="uid://mxfujejdllj" path="res://scenes/clues.tscn" id="20_4tg4m"]
+[ext_resource type="PackedScene" uid="uid://bfatumrlb6xcg" path="res://scenes/pause_menu.tscn" id="21_4axs6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_djjcw"]
 texture = ExtResource("3_7sjgg")
@@ -494,6 +495,12 @@ shape = SubResource("RectangleShape2D_n27jj")
 position = Vector2(792, 372.00003)
 rotation = -1.6452345
 shape = SubResource("RectangleShape2D_n27jj")
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=1609581765]
+layer = 2
+
+[node name="pause_menu" parent="CanvasLayer2" unique_id=1274772645 instance=ExtResource("21_4axs6")]
+metadata/_edit_use_anchors_ = true
 
 [connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

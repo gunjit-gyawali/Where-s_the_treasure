@@ -17,6 +17,8 @@
 [ext_resource type="PackedScene" uid="uid://b6k2nw2gupyhk" path="res://scenes/player.tscn" id="14_bgm6t"]
 [ext_resource type="PackedScene" uid="uid://dr2dbw7xp8od4" path="res://scenes/enemy.tscn" id="15_ab0ia"]
 [ext_resource type="FontFile" uid="uid://cmh8qi0a2srw5" path="res://assets/fonts/CinzelDecorative-Black.otf" id="15_spi7c"]
+[ext_resource type="FontFile" uid="uid://bdk5168foxb0b" path="res://assets/fonts/VCR_OSD_MONO_1.001.ttf" id="18_spi7c"]
+[ext_resource type="PackedScene" uid="uid://bfatumrlb6xcg" path="res://scenes/pause_menu.tscn" id="19_kebo3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xnrg5"]
 texture = ExtResource("1_s1nx1")
@@ -277,6 +279,10 @@ font_color = Color(0, 0, 0, 1)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_88cgu"]
 size = Vector2(27.5, 114.75)
 
+[sub_resource type="LabelSettings" id="LabelSettings_cfg4s"]
+font = ExtResource("18_spi7c")
+font_size = 8
+
 [node name="traning_area" type="Node2D" unique_id=701110308]
 y_sort_enabled = true
 script = ExtResource("1_ralq8")
@@ -340,7 +346,7 @@ position = Vector2(212, 283)
 position = Vector2(251, 304)
 
 [node name="AnimatedSprite2D" parent="enemis/enemy11" index="0" unique_id=748333438]
-position = Vector2(4.0000134, -10.000003)
+position = Vector2(3.999998, 6.999999)
 scale = Vector2(5.7343755, 5.7343755)
 animation = &"idle"
 
@@ -380,7 +386,7 @@ position = Vector2(748, 236)
 position = Vector2(740, 211)
 
 [node name="enemy10" parent="enemis2" unique_id=594052031 instance=ExtResource("15_ab0ia")]
-position = Vector2(755, 212)
+position = Vector2(749, 214)
 
 [node name="enemis3" type="Node" parent="." unique_id=2079518192]
 
@@ -419,6 +425,20 @@ position = Vector2(548, 176)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=976924951]
 position = Vector2(838, 216)
 shape = SubResource("RectangleShape2D_88cgu")
+
+[node name="Label" type="Label" parent="." unique_id=1823728422]
+offset_left = 227.0
+offset_top = 223.0
+offset_right = 286.0
+offset_bottom = 233.0
+text = "Come Here"
+label_settings = SubResource("LabelSettings_cfg4s")
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=456152579]
+layer = 2
+
+[node name="pause_menu" parent="CanvasLayer2" unique_id=1274772645 instance=ExtResource("19_kebo3")]
+metadata/_edit_use_anchors_ = true
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 
