@@ -9,7 +9,7 @@ The clues are the treasure.
 
 WASD — Move
 
-Space — Jump
+Space — Attack
 
 ## Objective
 
